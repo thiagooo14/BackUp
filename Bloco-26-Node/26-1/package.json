@@ -1,0 +1,20 @@
+{
+  "name": "calcula-imc",
+  "version": "1.0.0",
+  "description": "exercicios calcula imc",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thiagooo14/Exercicios.git"
+  },
+  "author": "Thiago Tavares <thiagooo15@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thiagooo14/Exercicios/issues"
+  },
+  "homepage": "https://github.com/thiagooo14/Exercicios#readme"
+}
