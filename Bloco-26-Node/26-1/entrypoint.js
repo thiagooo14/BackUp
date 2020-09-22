@@ -4,7 +4,7 @@
  >> Instalado o pacote inquirer para coletar os dados do usuário.
  > IMC é peso / altura².
 */
-
+// resposta https://github.com/tamagoshii/Trybe-Course/blob/master/Exercicios/26_1/calcula-imc/entrypoint.js
 // importando pacote inquirer
 const inquirer = require("inquirer");
 
