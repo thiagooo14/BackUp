@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/thiagooo14/Exercicios/issues"
   },
-  "homepage": "https://github.com/thiagooo14/Exercicios#readme"
+  "homepage": "https://github.com/thiagooo14/Exercicios#readme",
+  "dependencies": {
+    "inquirer": "^7.3.3",
+    "readline-sync": "^1.4.10"
+  }
 }

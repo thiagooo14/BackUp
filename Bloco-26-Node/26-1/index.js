@@ -7,7 +7,7 @@ utilizado o script start do npm para executar o arquivo index.js.
 const readline = require('readline-sync');
 
 function calculaIMC() {
-  const altura = readline.questionFloat("digita a Alutura:");
+  const altura = readline.questionFloat("digita a Altura:");
   const peso = readline.questionFloat("digite o peso:");
 
   console.log("Peso = %s Altura = %s", altura, peso);
