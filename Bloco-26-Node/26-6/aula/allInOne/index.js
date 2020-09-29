@@ -1,3 +1,5 @@
+// Parei na minutagem 54:36
+
 const express = require('express');
 const bodyParder = require('body-parser');
 const mysqlx = require('@mysql/xdevapi');
@@ -75,6 +77,46 @@ app.post('/cats', async (req, res) => {
   } catch (err) {
     console.error(err);
     res.status(500).send('<h2>Erro ao criar o gato.</h2>');
+  }
+});
+
+app.get('/cats/:id', async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    const db = await connection();
+    const results = await db
+      .getTable('cats')
+      .select(['name', 'age'])
+      .where('id = :id')
+      .bind('id', id)
+      .execute();
+
+    const cat = results.fetchAll()[0];
+
+    if (!cat) {
+      return res.status(404).send('<h2>Gato não encontrado :</h2>');
+    }
+
+    const [name, age] = cat;
+    const content = `<h2>Nome: ${name} - Idade: ${age}</h2>`;
+    const htmlBase = `
+      <html>
+        <header>
+          <title>Detalhes</title>
+        </header>
+        <body>
+          <div style="background-color: antiquewhite">
+            ${content}
+          </div>
+        </body>
+      </html>
+    `;
+    
+    res.send(htmlBase);
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('<h2>Erro ao tentar realizar operação</h2>');
   }
 });
 
