@@ -1,5 +1,3 @@
-// Parei na minutagem 54:36
-
 const express = require('express');
 const bodyParder = require('body-parser');
 const mysqlx = require('@mysql/xdevapi');
